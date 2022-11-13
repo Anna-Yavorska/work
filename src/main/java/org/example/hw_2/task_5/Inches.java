@@ -1,4 +1,4 @@
-package org.example.hw_2.task_1.task_5;
+package org.example.task_5;
 
 public class Inches {
     public static void main(String[] args) {
