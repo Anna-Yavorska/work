@@ -1,4 +1,4 @@
-package org.example.hw_2.task_1.task_9.triangle;
+package org.example.task_9.triangle;
 
 public class Triangle {
     public static void main(String[] args) {
