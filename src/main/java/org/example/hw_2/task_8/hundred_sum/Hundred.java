@@ -1,4 +1,4 @@
-package org.example.hw_2.task_8.sum_of_even;
+package org.example.hw_2.task_8.hundred_sum;
 
 public class Hundred {
     public static void main(String[] args) {
@@ -6,9 +6,8 @@ public class Hundred {
         int sumOdd = 0;
         int totalSum = 0;
 
-        for (int even = 2; even <= 100; even += 2) {//Как сделать используя один цикл не понимаю, нужна подсказка
+        for (int even = 2; even <= 100; even += 2) {
             sumEven += even;
-
             System.out.println(sumEven);
         }
         for (int odd = 1; odd <= 100; odd += 2) {

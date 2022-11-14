@@ -1,11 +1,10 @@
-package org.example.task_4;
+package org.example.hw_2.task_4;
 
 public class AB {
     public static void main(String[] args) {
         // A*B
-        int a = 4;
-        int b;
-        for (b = 0; b < 100; b = (b + a)) {
+        int a = 6;
+        for (int b = 0; b < 100; b += a) {
             System.out.println(b);
         }
     }

@@ -1,4 +1,4 @@
-package org.example.hw_2.task_1.task_6;
+package org.example.hw_2.task_6;
 
 public class EvenNumbers {
     public static void main(String[] args) {

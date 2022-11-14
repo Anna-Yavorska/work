@@ -1,23 +1,16 @@
-package org.example.task_9.triangle;
+package org.example.hw_2.task_9.triangle;
 
 public class Triangle {
     public static void main(String[] args) {
-        int i = 4;
-        int j = 4;
-        for (i = 4; i > 0; i--) {
-            if (i == j) {
-                System.out.println("   *");
-                if (i == j--) {
-                    System.out.println("  **");
-                    if (i != j) {
-                        System.out.println(" ***");
-                        break;
-                    }
-                }
+        int triangle = 4;
+        for (int i = 0; i < triangle; i++) {
+            for (int j = 0; j <= triangle - i; j++) {
+                System.out.print(" ");
             }
+            for (int k = 0; k <= i; k++) {
+                System.out.print("*");
+            }
+            System.out.println("\n");
         }
-        System.out.println("****");
     }
 }
-
-

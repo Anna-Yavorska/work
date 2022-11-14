@@ -1,12 +1,12 @@
-package org.example.task_3;
+package org.example.hw_2.task_3;
 
 public class Calculation {
     public static void main(String[] args) {
-        int j = 0;
+        int sum = 0;
         for (int i = 0; i <= 8; i++) {
-            j += 1 << i;
+            sum += 1 << i;
         }
-        System.out.println(j);
+        System.out.println(sum);
     }
 }
 
