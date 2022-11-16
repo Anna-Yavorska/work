@@ -7,7 +7,7 @@ public class Inversion {
         int[] order = {0, 1, 2, 3, 4};
         System.out.print(Arrays.toString(order) + " -> ");
         boolean needToSort = true;
-        while (needToSort) {
+        while (needToSort) { // здесь должно быть достаточно одного цикла, ниже оставил пример кода
             needToSort = false;
             for (int i = 1; i < order.length; i++) {
                 if (order[i - 1] < order[i]) {
@@ -19,5 +19,17 @@ public class Inversion {
             }
         }
         System.out.println(Arrays.toString(order));
+        
+        /*
+        Пример кода
+        
+        int rightIndex = array.length - 1;
+        for (int i = 0; i < array.length / 2; i++) {
+            int tmp = array[i];
+            array[i] = array[rightIndex];
+            array[rightIndex] = tmp;
+            rightIndex--;
+        }
+        */
     }
 }
