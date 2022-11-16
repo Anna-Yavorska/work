@@ -9,7 +9,7 @@ public class Arithmetic {
             for (int i = 0; i < math.length; i++) {
                 sum += math[i];
             }
-            average = sum / math.length;
+            average = sum / math.length; // если взять числа 1,2,2 - то у тебя среднее 1, а должно быть 1,5. Ты близка к успеху, но int здесь не подойдет
         }
         System.out.println(average);
     }
