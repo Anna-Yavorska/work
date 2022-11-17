@@ -10,30 +10,27 @@ public class Family {
         int age = family.nextInt();
         System.out.println("How old is your mother?");
         int age2 = family.nextInt();
-        System.out.println("How old is are you?");
+        System.out.println("How old are you?");
         int age3 = family.nextInt();
 
         int[] initAge = {age, age2, age3};
-        // System.out.println(Arrays.toString(initAge)); - не оставляй комментарии в коде
         int theYoungest = initAge[0];
         int theOldest = initAge[0];
         int totalAge = 0;
-        totalAge = age + age2 + age3; // тотал тоже в цикле считать надо, вдруг появится еще один член семьи
-        
-        System.out.println("Total family age " + totalAge); 
-        for (int i = 1; i < initAge.length; i++) { // тотал, младшего и старшего считаем в одном цикле, зачем здесь два?
-            if (initAge[i] < theYoungest) {
-                theYoungest = initAge[i];
+        for (int i = 0; i < initAge.length; i++) {
+            totalAge += initAge[i];
+            if (initAge[i] > theOldest) {
+                theOldest = initAge[i];
+            } else {
+                if (initAge[i] < theYoungest) {
+                    theYoungest = initAge[i];
+                }
             }
         }
-        
-        System.out.println("The youngest " + theYoungest);
-        for (int j = 1; j < initAge.length; j++) {
-            if (initAge[j] > theOldest) {
-                theOldest = initAge[j];
-            }
-        }
-        System.out.println("The oldest " + theOldest);
+        System.out.println(theYoungest);
+        System.out.println(theOldest);
+        System.out.println(totalAge);
+
     }
 }
 

@@ -12,9 +12,7 @@ public class EvenElements {
                 evenNumbers++;
             }
         }
-        
         System.out.println(Arrays.toString(numbers));
-        
         int[] evenArray = new int[evenNumbers];
         int index = 0;
         for (int i = 0; i < numbers.length; i++) {

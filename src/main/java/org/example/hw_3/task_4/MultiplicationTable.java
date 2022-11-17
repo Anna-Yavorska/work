@@ -2,20 +2,20 @@ package org.example.hw_3.task_4;
 
 public class MultiplicationTable {
     public static void main(String[] args) {
-        int[][] multiplication = new int[10][10];
-        System.out.println("             Multiplication table");
-        System.out.println("I------------------------------------------------------------I"); // красиво, но вообще непонятно :)
-        System.out.println("I 1  II 2  II 3  II 4  II 5  II 6  II 7  II 8  II 9          I"); // не привязывайся к конкретным числам, таблица может быть и до 100х100
-        System.out.println("I------------------------------------------------------------I");
+        int n = 10;
+        int m = 10;
+        int[][] multiplication = new int[n][m];
+        System.out.println(" Multiplication table");
+        // красиво, но вообще непонятно :)
+        // не привязывайся к конкретным числам, таблица может быть и до 100х100
         for (int i = 1; i < multiplication.length; i++) {
             int[] firstMultiplication = multiplication[i];
             for (int j = 1; j < multiplication.length; j++) {
                 firstMultiplication[j] = i * j;
-
-                System.out.print("I " + firstMultiplication[j] + ", I");
+                System.out.print(firstMultiplication[j] + " ");
             }
             System.out.println();
-            System.out.println("I------------------------------------------------------------I");
+
         }
     }
 }
