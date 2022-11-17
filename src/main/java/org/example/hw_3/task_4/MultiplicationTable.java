@@ -2,8 +2,8 @@ package org.example.hw_3.task_4;
 
 public class MultiplicationTable {
     public static void main(String[] args) {
-        int n = 10;
-        int m = 10;
+        int n = 10; // n -> height
+        int m = 10; // m -> width
         int[][] multiplication = new int[n][m];
         System.out.println(" Multiplication table");
         for (int i = 1; i < multiplication.length; i++) {
