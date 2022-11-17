@@ -2,6 +2,7 @@ package org.example.hw_3.task_7;
 
 import java.util.Arrays;
 
+//+
 public class Bubble {
     public static void main(String[] args) {
         int[] array = {0, 3, 14, 6, 15, 80, 96, 46};
