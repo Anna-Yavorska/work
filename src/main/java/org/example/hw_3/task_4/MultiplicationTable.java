@@ -6,8 +6,6 @@ public class MultiplicationTable {
         int m = 10;
         int[][] multiplication = new int[n][m];
         System.out.println(" Multiplication table");
-        // красиво, но вообще непонятно :)
-        // не привязывайся к конкретным числам, таблица может быть и до 100х100
         for (int i = 1; i < multiplication.length; i++) {
             int[] firstMultiplication = multiplication[i];
             for (int j = 1; j < multiplication.length; j++) {
