@@ -3,7 +3,7 @@ package org.example.hw_3.task_2;
 public class Arithmetic {
     public static void main(String[] args) {
         double[] math = new double[]{1, 2, 2, 5, 20.8};
-        double average = 0;
+        double average = 0; // ты используешь эту переменную в 12 строке, вот и создай ее там
         if (math.length > 0) {
             double sum = 0.0;
             for (int i = 0; i < math.length; i++) {
