@@ -6,7 +6,7 @@ public class Sportsman {
         double persent = 0.1;
         double run = 10;
         double totalRun = 0;
-        for (run = 10; runDays <= 7; run = run + (run * persent)) {
+        for (run = 10; runDays <= 7; run = run + (run * persent)) { // в условии цикла лучше использовать только одну переменную
             runDays++;
             totalRun += run;
             System.out.println(totalRun);
