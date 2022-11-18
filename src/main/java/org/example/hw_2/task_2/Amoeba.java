@@ -1,5 +1,6 @@
 package org.example.hw_2.task_2;
 
+//+
 public class Amoeba {
     public static void main(String[] args) {
         int amoeba = 1;
