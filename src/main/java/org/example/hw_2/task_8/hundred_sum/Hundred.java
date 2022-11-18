@@ -1,5 +1,6 @@
 package org.example.hw_2.task_8.hundred_sum;
 
+// hundred_sum - а зачем этот пакет? думаю класс можно просто положить в task_8
 public class Hundred {
     public static void main(String[] args) {
         int sumEven = 0;
