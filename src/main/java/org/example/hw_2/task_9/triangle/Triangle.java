@@ -6,7 +6,7 @@ public class Triangle {
         System.out.println("Triangle 1");
         int triangle = 4;
         for (int i = 0; i < triangle; i++) {
-            for (int j = 0; j <= triangle - i; j++) {
+            for (int j = 0; j <= triangle - i; j++) { // если ты уберешь этот цикл, то получигт нужный результат
                 System.out.print(" ");
             }
             for (int k = 0; k <= i; k++) {
@@ -15,7 +15,7 @@ public class Triangle {
             System.out.println();
         }
         System.out.println("Triangle 2");
-        for (int i = 0; i < triangle; i++) {
+        for (int i = 0; i < triangle; i++) { // если ты уберешь этот цикл, то получигт нужный результат
             for (int k = 0; k < i; k++) {
                 System.out.print(" ");
             }
