@@ -1,5 +1,6 @@
 package org.example.hw_2.task_9.triangle;
 
+// у тебя первый треугольник немного поехал, но в целом задача была нарисовать не такие же, а два других, они будут как бы отзеркалены от тех, что были в самом задании
 public class Triangle {
     public static void main(String[] args) {
         System.out.println("Triangle 1");
