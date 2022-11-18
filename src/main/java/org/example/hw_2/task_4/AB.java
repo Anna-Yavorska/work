@@ -1,8 +1,8 @@
 package org.example.hw_2.task_4;
 
-public class AB {
+public class AB { // AB -> Multiplier
     public static void main(String[] args) {
-        int a = 6;
+        int a = 6; // в данном случае можешь не исправлять, но в будущем откажись от подобных названий переменных
         for (int b = 0; b < 100; b += a) {
             System.out.println(b);
         }
