@@ -1,6 +1,6 @@
 package org.example.hw_2.task_6;
 
-// +
+
 public class EvenNumbers {
     public static void main(String[] args) {
         for (int i = 1; i <= 100; i++) {

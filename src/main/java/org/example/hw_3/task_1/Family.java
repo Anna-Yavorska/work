@@ -13,24 +13,23 @@ public class Family {
         System.out.println("How old are you?");
         int age3 = family.nextInt();
 
-        int[] initAge = {age, age2, age3}; // initAge - это массив, а по названию как будто в нем хранится одно число возраста. familyAges было бы неплохим названием
-        int theYoungest = initAge[0];
-        int theOldest = initAge[0];
+        int[] familyAges = {age, age2, age3};
+        int theYoungest = familyAges[0];
+        int theOldest = familyAges[0];
         int totalAge = 0;
-        for (int i = 0; i < initAge.length; i++) { // я думаю цикл можно начинать с int i = 1
-            totalAge += initAge[i];
-            if (initAge[i] > theOldest) {
-                theOldest = initAge[i];
+        for (int i = 0; i < familyAges.length; i++) {
+            totalAge += familyAges[i];
+            if (familyAges[i] > theOldest) {
+                theOldest = familyAges[i];
             } else { 
-                if (initAge[i] < theYoungest) {
-                    theYoungest = initAge[i];
+                if (familyAges[i] < theYoungest) {
+                    theYoungest = familyAges[i];
                 }
             }
         }
-        System.out.println(theYoungest); // предлагаю добавить System.out.println("the youngest" + theYoungest); и т.д.
-        System.out.println(theOldest);
-        System.out.println(totalAge);
-
+        System.out.println("The youngest " + theYoungest);
+        System.out.println("The oldest " + theOldest);
+        System.out.println("Total family ages " + totalAge);
     }
 }
 

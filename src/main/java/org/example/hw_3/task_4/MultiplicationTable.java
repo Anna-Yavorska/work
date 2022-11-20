@@ -2,9 +2,9 @@ package org.example.hw_3.task_4;
 
 public class MultiplicationTable {
     public static void main(String[] args) {
-        int n = 10; // n -> height
-        int m = 10; // m -> width
-        int[][] multiplication = new int[n][m];
+        int height = 10;
+        int width = 10;
+        int[][] multiplication = new int[height][width];
         System.out.println(" Multiplication table");
         for (int i = 1; i < multiplication.length; i++) {
             int[] firstMultiplication = multiplication[i];
@@ -13,7 +13,6 @@ public class MultiplicationTable {
                 System.out.print(firstMultiplication[j] + " ");
             }
             System.out.println();
-
         }
     }
 }

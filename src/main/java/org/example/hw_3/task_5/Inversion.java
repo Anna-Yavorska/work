@@ -14,6 +14,5 @@ public class Inversion {
             rightIndex--;
         }
         System.out.println(Arrays.toString(array));
-// лишняя строка
     }
 }

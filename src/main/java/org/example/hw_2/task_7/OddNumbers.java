@@ -6,8 +6,7 @@ public class OddNumbers {
         for (int i = 1; i <= 99; i++) {
             if (i % 2 != 0) {
                 sum += i;
-                System.out.println(sum); // можно было один раз вывести итоговую сумму, это уже по желанию
-
+                System.out.println(sum);
             }
         }
     }

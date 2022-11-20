@@ -1,6 +1,6 @@
 package org.example.hw_2.task_5;
 
-//+
+
 public class Inches {
     public static void main(String[] args) {
         double coefficient = 2.54;
