@@ -1,5 +1,6 @@
 package org.example.hw_2.task_9;
 
+//+
 public class Triangle {
     public static void main(String[] args) {
         System.out.print("Triangle 1");
