@@ -1,6 +1,6 @@
 package org.example.hw_4.task_2;
 
-public class NamesAges {
+public class NamesAges { // я бы предложил класс с методом main() назвать, например, NameAgeMain, но сначала придумать другое название для MainAge
     public static void main(String[] args) {
 
         NameAge girl = new NameAge();
