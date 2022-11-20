@@ -1,3 +1,4 @@
 static block
 regular init block
 regular init block
+//  new ExecutionQueue() -> () - это конструктор класса ExecutionQueue. В цепочке создания он будет вызван последним, значит, msg = "constructor value"
