@@ -38,6 +38,7 @@ public class Butterfly {
         for (int i = 0; i < mid - 1; i++) {
             int printingIndex = 1;
             for (int j = 1; j < size + 1; j++) {
+
                 if (j < mid) {
                     System.out.print(printingIndex);
                 } else {
@@ -50,9 +51,9 @@ public class Butterfly {
                 if (j < mid) {
                     printingIndex++;
                 }
-                if (j > mid) {
-                    printingIndex--;
-                }
+               if (j > mid) {
+                   printingIndex--;
+               }
             }
             System.out.println();
         }
