@@ -1,46 +1,36 @@
 package org.example.hw_5.task_2;
 
+import java.math.BigDecimal;
+
 public class HarvestStatistic {
-    private String melonsPlants = "Melons";
-    private String wheatPlants = "Wheat";
-    private Integer totalPlantsWeight;
-    String[] fields = new String[]{"VegetableField", "WheatField"};
+    private String plant;
+    private BigDecimal totalWeight;
 
-    public void HarvestStatisticServise(String melonsPlants, Integer totalPlantsWeight) {
-      this.melonsPlants = melonsPlants;
-      this.totalPlantsWeight = totalPlantsWeight;
-      return;
+    public HarvestStatistic() {
+
     }
 
-    public String getMelonsPlants() {
-        return melonsPlants;
+    public String getPlant() {
+        return plant;
     }
 
-    public void setMelonsPlants(String melonsPlants) {
-        this.melonsPlants = melonsPlants;
+    public void setPlant(String plant) {
+        this.plant = plant;
     }
 
-    public String getWheatPlants() {
-        return wheatPlants;
+    public BigDecimal getTotalWeight() {
+        return totalWeight;
     }
 
-    public void setWheatPlants(String wheatPlants) {
-        this.wheatPlants = wheatPlants;
+    public void setTotalWeight(BigDecimal totalWeight) {
+        this.totalWeight = totalWeight;
     }
 
-    public Integer getTotalPlantsWeight() {
-        return totalPlantsWeight;
-    }
-
-    public void setTotalPlantsWeight(Integer totalPlantsWeight) {
-        this.totalPlantsWeight = totalPlantsWeight;
-    }
-
-    public String[] getFields() {
-        return fields;
-    }
-
-    public void setFields(String[] fields) {
-        this.fields = fields;
+    @Override
+    public String toString() {
+        return "HarvestStatistic{" +
+                "plant='" + plant + '\'' +
+                ", totalWeight=" + totalWeight +
+                '}';
     }
 }

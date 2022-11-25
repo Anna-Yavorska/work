@@ -1,59 +1,53 @@
 package org.example.hw_5.task_1;
 
+import java.math.BigDecimal;
+
 public class Harvest {
-    private final long UNIQUE_IDENTIFICATOR = 159L;
-    private String vegetableField = "Vegetable";
-    private String wheatField = "Wheat";
-    private String melonsPlants = "Melons";
-    private String wheatPlants = "Wheat";
-    private Integer melonsPlantsWeight;
-    private String wheatPlantsWeight;
+    private Long id;
+    private String field;
+    private String plant;
+    private BigDecimal weight;
 
-    public String getVegetableField() {
-        return vegetableField;
+    public Harvest() {
+
     }
 
-    public void setVegetableField(String vegetableField) {
-        this.vegetableField = vegetableField;
+    public Harvest(Long id, String field, String plant, BigDecimal weight) {
+        this.id = id;
+        this.field = field;
+        this.plant = plant;
+        this.weight = weight;
     }
 
-    public String getWheatField() {
-        return wheatField;
+    public Long getId() {
+        return id;
     }
 
-    public void setWheatField(String wheatField) {
-        this.wheatField = wheatField;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getMelonsPlants() {
-        return melonsPlants;
+    public String getField() {
+        return field;
     }
 
-    public void setMelonsPlants(String melonsPlants) {
-        this.melonsPlants = melonsPlants;
+    public void setField(String field) {
+        this.field = field;
     }
 
-    public String getWheatPlants() {
-        return wheatPlants;
+    public String getPlant() {
+        return plant;
     }
 
-    public void setWheatPlants(String wheatPlants) {
-        this.wheatPlants = wheatPlants;
+    public void setPlant(String plant) {
+        this.plant = plant;
     }
 
-    public Integer getMelonsPlantsWeight() {
-        return melonsPlantsWeight;
+    public BigDecimal getWeight() {
+        return weight;
     }
 
-    public void setMelonsPlantsWeight(Integer melonsPlantsWeight) {
-        this.melonsPlantsWeight = melonsPlantsWeight;
-    }
-
-    public String getWheatPlantsWeight() {
-        return wheatPlantsWeight;
-    }
-
-    public void setWheatPlantsWeight(String wheatPlantsWeight) {
-        this.wheatPlantsWeight = wheatPlantsWeight;
+    public void setWeight(BigDecimal weight) {
+        this.weight = weight;
     }
 }
