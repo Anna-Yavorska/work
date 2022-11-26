@@ -5,6 +5,7 @@ import org.example.hw_5.task_2.HarvestStatistic;
 
 import java.math.BigDecimal;
 
+//+
 public class HarvestStatisticService {
     public HarvestStatistic[] calculateStatistic(Harvest[] harvests) {
 
