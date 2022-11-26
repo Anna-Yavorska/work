@@ -2,6 +2,7 @@ package org.example.hw_5.task_1;
 
 import java.math.BigDecimal;
 
+//+
 public class Harvest {
     private Long id;
     private String field;
