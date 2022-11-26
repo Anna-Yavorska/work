@@ -27,7 +27,7 @@ public class HarvestStatisticServiceMain {
 
         HarvestStatistic[] statistics = statisticService.calculateStatistic(harvests);
 
-        for (HarvestStatistic statistic : statistics) {
+        for (HarvestStatistic statistic : statistics) { // не, так не пойдет. Новый массив, в котором только нужные данные, на занятии расскажу почему
             if (statistic == null) {
                 break;
             }
