@@ -2,7 +2,7 @@ package org.example.hw_3.task_8;
 
 public class Butterfly {
     public static void main(String[] args) {
-        int size = 18;
+        int size = 10;
         int leftBorder = 1;
         int rightBorder = size;
         int mid = size / 2;

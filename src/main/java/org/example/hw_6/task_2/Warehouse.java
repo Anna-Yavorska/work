@@ -2,11 +2,9 @@ package org.example.hw_6.task_2;
 
 import java.util.Arrays;
 
-public class WarehouseAbstract {
-    public static String kindFruit;
+public class Warehouse {
    static String [] fruit = {"Melon", "Apple", "Mandarin", "Pear", "Banana"};
     public void getArray(){
-
         System.out.println(Arrays.toString(fruit));
     }
     public void next(){

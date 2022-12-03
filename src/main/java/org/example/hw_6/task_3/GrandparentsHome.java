@@ -1,4 +1,4 @@
-package org.example.task_3;
+package org.example.hw_6.task_3;
 
 public class GrandparentsHome implements Home {
     @Override

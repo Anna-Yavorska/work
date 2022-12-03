@@ -10,7 +10,6 @@ public class Harvest {
     private BigDecimal weight;
 
     public Harvest() {
-//эта строка не нужна
     }
 
     public Harvest(Long id, String field, String plant, BigDecimal weight) {

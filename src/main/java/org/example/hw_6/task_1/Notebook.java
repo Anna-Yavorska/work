@@ -1,4 +1,4 @@
-package org.example.task_1;
+package org.example.hw_6.task_1;
 
 public class Notebook implements Computer {
     private final String userNaim = "Aleksey";
@@ -11,11 +11,13 @@ public class Notebook implements Computer {
 
     @Override
     public void Off() {
+
         System.out.println("Good bye, " + userNaim + "!");
     }
 
     @Override
     public void Reset() {
+
         System.out.println("Do you really want it, " + userNaim + "?");
     }
 }

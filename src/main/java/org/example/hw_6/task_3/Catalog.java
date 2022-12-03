@@ -1,7 +1,10 @@
-package org.example.task_3;
+package org.example.hw_6.task_3;
+
+import java.util.Arrays;
 
 public class Catalog implements Home {
     public static void main(String[] args) {
+
         Home skyscraper = new Skyscraper();
         System.out.println("Skyscraper");
         skyscraper.GetFloors();
@@ -25,6 +28,6 @@ public class Catalog implements Home {
         grandparentsHome.GetFloors();
         grandparentsHome.TurnHeating();
         grandparentsHome.GetResidents();
-        Catalog[] home = new Catalog[4];
+
     }
 }

@@ -6,8 +6,7 @@ public class HarvestStatistic {
     private String plant;
     private BigDecimal totalWeight;
 
-    public HarvestStatistic() { // я думаю этот конструктор можно удалить
-
+    public static void indexOf(boolean b) {
     }
 
     public String getPlant() {

@@ -1,5 +1,6 @@
 package org.example.hw_5.task_3;
 
+import org.example.hw_4.task_3.Array;
 import org.example.hw_5.task_1.Harvest;
 import org.example.hw_5.task_2.HarvestStatistic;
 
@@ -26,12 +27,23 @@ public class HarvestStatisticServiceMain {
         harvests[5] = carrotEgorka;
 
         HarvestStatistic[] statistics = statisticService.calculateStatistic(harvests);
-
-        for (HarvestStatistic statistic : statistics) { // не, так не пойдет. Новый массив, в котором только нужные данные, на занятии расскажу почему
-            if (statistic == null) {
+        int index = 0;
+        for (int i = 0; i < statistics.length; i++) {
+            if (statistics[i] == null) {
+                index = i;
                 break;
             }
-            System.out.println(statistic);
+        }
+        HarvestStatistic[] finalStatistics = new HarvestStatistic[index];
+        for (int i = 0; i < index; i++) {
+            finalStatistics[i] = statistics[i];
+        }
+        for (int i = 0; i < statistics.length; i++) {
+            System.out.println(statistics[i]);
+        }
+        System.out.println("******");
+        for (int i = 0; i < finalStatistics.length; i++) {
+            System.out.println(finalStatistics[i]);
         }
     }
 }
