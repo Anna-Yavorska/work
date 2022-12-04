@@ -1,5 +1,6 @@
 package org.example.hw_6.task_3;
 
+// если в начале метода используешь слово "get", то метод не может быть void
 public class VacationHome implements Home {
     @Override
     public void GetFloors() { // название методов с маленькой буквы
