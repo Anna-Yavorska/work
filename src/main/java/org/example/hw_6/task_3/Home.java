@@ -1,7 +1,7 @@
 package org.example.hw_6.task_3;
 
 public interface Home {
-
+//лишний абзац
     default void GetFloors() { // название методов с маленькой буквы и забываем про default методы в интерфейсе
         System.out.print("Floors =");
     }
