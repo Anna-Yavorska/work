@@ -2,6 +2,8 @@ package org.example.hw_6.task_3;
 
 import java.util.Arrays;
 
+// из задания "Есть каталог домов (например класс, внутри которого какой-то массив).",
+//т.е. в этом классе долден быть массив Home[] и в конструктор ты передаешь массив, который создала и заполнила где-нибудь в отдельном классе в методе main()
 public class Catalog implements Home {
     public static void main(String[] args) {
 
