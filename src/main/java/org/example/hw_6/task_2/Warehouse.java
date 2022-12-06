@@ -2,6 +2,7 @@ package org.example.hw_6.task_2;
 
 import java.util.Arrays;
 
+//+
 public class Warehouse {
     private Fruit[] fruits;
     private int currentElement = -1;
