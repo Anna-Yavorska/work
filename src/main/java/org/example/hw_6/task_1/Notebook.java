@@ -1,5 +1,6 @@
 package org.example.hw_6.task_1;
 
+//+
 public class Notebook implements Computer {
     private String on;
     private String off;
