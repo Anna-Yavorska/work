@@ -1,5 +1,6 @@
 package org.example.hw_6.task_3;
 
+//+
 public class HouseMain {
     public static void main(String[] args) {
         House building = new Building(8, true, 600);
