@@ -2,20 +2,34 @@ package org.example.hw_6.task_2;
 
 import java.util.Arrays;
 
-// отформатируй код
 public class Warehouse {
-   static String [] fruit = {"Melon", "Apple", "Mandarin", "Pear", "Banana"}; // поля класса должны быть приватными. Массив fruit не должен быть static
-    public void getArray(){ // в задании сказано, что метод getArray() должен возвращать массив, значит, метод не может быть void
-        System.out.println(Arrays.toString(fruit));
-    } // абзац
-    public void next(){ // в задании сказано, что метод next() должен возвращать элемент массива, значит, метод не может быть void
-        for (var i = 0; i < fruit.length; i++){
-            System.out.println(fruit[i]);
+    private Fruit[] fruits;
+    private int currentElement = -1;
+
+    public Warehouse(Fruit[] fruits) {
+        this.fruits = fruits;
     }
-        if (fruit.length == 5) {
-            System.out.println(fruit[0]);
+
+    public Fruit next() {
+        if (currentElement >= fruits.length - 1) {
+            currentElement = -1;
         }
+        currentElement = currentElement + 1;
+        return fruits[currentElement];
     }
-   
-   // по заданию еще должен быть метод toString()
+
+    public Fruit[] getArray() {
+        Fruit[] copy = new Fruit[fruits.length];
+        for (int i = 0; i < copy.length; i++) {
+            copy[i] = fruits[i];
+        }
+        return copy;
+    }
+
+    @Override
+    public String toString() {
+        return "Warehouse{" +
+                "fruits=" + Arrays.toString(fruits) +
+                '}';
+    }
 }

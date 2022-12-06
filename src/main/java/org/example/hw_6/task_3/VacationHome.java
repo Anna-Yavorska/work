@@ -1,19 +1,28 @@
 package org.example.hw_6.task_3;
 
-// если в начале метода используешь слово "get", то метод не может быть void
-public class VacationHome implements Home {
-    @Override
-    public void GetFloors() { // название методов с маленькой буквы
-        System.out.print("Floors = " + 1);
+public class VacationHome implements House {
+    private int floors;
+   private boolean heating;
+   private int currenResidents;
+
+    public VacationHome(int floors, boolean heating, int currenResidents) {
+        this.floors = floors;
+        this.heating = heating;
+        this.currenResidents = currenResidents;
     }
 
     @Override
-    public void TurnHeating() { // название методов с маленькой буквы
-        System.out.print(" Heating is off ");
+    public int getFloors() {
+        return floors;
     }
 
     @Override
-    public void GetResidents() { // название методов с маленькой буквы
-        System.out.println("Residents = " + 5);
+    public boolean turnHeating() {
+        return heating;
+    }
+
+    @Override
+    public int getCurrenResidents() {
+        return currenResidents;
     }
 }

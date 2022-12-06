@@ -1,23 +1,22 @@
 package org.example.hw_6.task_1;
 
 public class Notebook implements Computer {
-    private final String userNaim = "Aleksey"; //userNaim -> у тебя опечатка и название переменной должно быть USER_NAME для констант + добавь static
+    private String on;
+    private String off;
+    private boolean reset;
 
     @Override
-    public void On() {
-        System.out.println("Welcome, " + userNaim + "!");
-//лишняя пустая строка
+    public String on() {
+        return on;
     }
 
     @Override
-    public void Off() {
-//лишняя пустая строка
-        System.out.println("Good bye, " + userNaim + "!");
+    public String off() {
+        return off;
     }
 
     @Override
-    public void Reset() {
-//лишняя пустая строка
-        System.out.println("Do you really want it, " + userNaim + "?");
+    public boolean reset() {
+        return reset;
     }
 }
