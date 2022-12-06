@@ -1,5 +1,6 @@
 package org.example.hw_6.task_2;
 
+//+
 public class WarehouseMain {
     public static void main(String[] args) {
         Fruit[] fruits = new Fruit[5];
