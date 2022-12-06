@@ -1,5 +1,6 @@
 package org.example.hw_6.task_3;
 
+//+
 public class Building implements House {
     private int floors;
     private boolean heating;
