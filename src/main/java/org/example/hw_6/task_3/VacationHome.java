@@ -1,5 +1,6 @@
 package org.example.hw_6.task_3;
 
+// отформатируй код
 public class VacationHome implements House {
     private int floors;
    private boolean heating;
