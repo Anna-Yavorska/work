@@ -1,10 +1,10 @@
 package org.example.hw_6.task_3;
 
-// отформатируй код
+
 public class VacationHome implements House {
     private int floors;
-   private boolean heating;
-   private int currenResidents;
+    private boolean heating;
+    private int currenResidents;
 
     public VacationHome(int floors, boolean heating, int currenResidents) {
         this.floors = floors;

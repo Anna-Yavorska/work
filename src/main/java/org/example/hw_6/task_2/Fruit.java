@@ -9,9 +9,6 @@ public class Fruit {
         this.weight = weight;
     }
 
-    public Fruit() { // конструктор без аргументов лучше поставить первым. Я думаю в рамках текущего задания его можно удалить
-    }
-
     @Override
     public String toString() {
         return "Fruit{" +
