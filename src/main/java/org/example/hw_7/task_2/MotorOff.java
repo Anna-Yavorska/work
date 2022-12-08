@@ -8,7 +8,7 @@ public class MotorOff {
         System.out.println(result);
     }
 
-    private static String motor(String off, int number) {
+    private static String motor(String off, int number) { //  в классе с методом main() мы должны просто управлять автомобилем, каких-либо доп методов здесь быть не должно
         if (number >= 1) {
             return off;
         }
