@@ -13,7 +13,7 @@ public class Car {
     }
 
     public boolean onMotor() {
-        return true;
+        return true; // состаяние true надо бы сохранить в поле класса, иначе как ты узнаешь работает сейчас мотор или нет?
     }
 
     public boolean offMotor() {
