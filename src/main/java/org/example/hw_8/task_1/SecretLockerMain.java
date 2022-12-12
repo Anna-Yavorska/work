@@ -9,13 +9,13 @@ public class SecretLockerMain {
 
         System.out.println(mommy);
         Class<SecretLocker> secretLockerClass = SecretLocker.class;
-        Field[] declaredFields = secretLockerClass.getDeclaredFields();
+        Field[] declaredFields = secretLockerClass.getDeclaredFields(); // добавь абзац после этойстроки, будет лучше читаться код
         for (Field declaredField : declaredFields) {
             if (declaredField.getName().equals("passcode")) {
                 declaredField.setAccessible(true);
                 declaredField.set(mommy, "Daddy ");
             }
-        }
+        } // добавь абзац после этойстроки, будет лучше читаться код
         System.out.println(mommy);
     }
 }
