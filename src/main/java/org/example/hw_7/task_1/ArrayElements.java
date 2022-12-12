@@ -2,29 +2,16 @@ package org.example.hw_7.task_1;
 
 public class ArrayElements {
     public static void main(String[] args) {
-        int[] five = new int[]{10, 20, 30, 40, 50, 60}; // five - почему такое название?
-        int index = five.length;
-        arrayRecursion(five, index); // arrayRecursion -> printArrayRecursion -> название метода - это глагол
+        int[] singleDigits = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
+        printArrayRecursion(singleDigits, 0);
     }
 
-    // твоя функция печатает массив в обратном порядке и немного неправильно написано, ниже оставил пример
-    private static int arrayRecursion(int[] five, int index) {
-        if (index <= 0) {
-            return five[0];
+    private static void printArrayRecursion(int[] singleDigits, int index) {
+        if (index == singleDigits.length) {
+            return;
         }
-        arrayRecursion(five, --index);
-        System.out.println(five[index]);
-        return five[index];
-    }
-    
-    /*
-        private static int arrayRecursion(int[] five, int index) {
-        if (index == five.length - 1) {
-            return five[index];
-        }
-        System.out.println(five[index]);
+        System.out.println(singleDigits[index]);
 
-        return arrayRecursion(five, ++index);
+        printArrayRecursion(singleDigits, ++index);
     }
-    */
 }

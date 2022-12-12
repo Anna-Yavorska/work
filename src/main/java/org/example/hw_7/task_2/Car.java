@@ -1,22 +1,45 @@
 package org.example.hw_7.task_2;
 
 public class Car {
-    private boolean transmission;
-    private boolean motor;
+    private Motor motor;
+    private Transmission transmission;
+    private boolean gas;
 
-    public boolean increase() {
-        return true;
+    public Car() {
+        this.motor = new Motor();
+        this.transmission = new Transmission();
     }
 
-    public boolean decrease() {
-        return true;
+    public void ride() {
+        if (motor.isState() && transmission.isFirstGear() && gas) {
+            System.out.println("Let's go!");
+        } else {
+            System.out.println("Something goes wrong!");
+        }
     }
 
-    public boolean onMotor() {
-        return true; // состаяние true надо бы сохранить в поле класса, иначе как ты узнаешь работает сейчас мотор или нет?
+    public void enginOn() {
+        motor.enginOn();
     }
 
-    public boolean offMotor() {
-        return true;
+    public void enginOff() {
+        motor.enginOff();
+    }
+
+    public int increaseGear() {
+        return transmission.increaseGear();
+    }
+
+    public int decreaseGear() {
+        return transmission.decreaseGear();
+    }
+
+    public boolean pressGas() {
+        gas = true;
+        return gas;
+    }
+
+    public void getCurrentSpeed() {
+        System.out.println(transmission.getCurrentSpeed());
     }
 }
