@@ -1,5 +1,6 @@
 package org.example.hw_8.task_1;
 
+//+
 public class SecretLocker {
     private final String passcode;
 
