@@ -7,8 +7,16 @@ public class WaterMain {
     public static void main(String[] args) throws Exception {
         Water water = new Water();
 
-        Method method = water.getClass().getDeclaredMethod("printNameWater", String.class);
-        method.setAccessible(true);
-        method.invoke(water, "Coca-cola");
+        Class<?> aClass = water.getClass();
+
+        Method[] declaredMethods = aClass.getDeclaredMethods();
+
+        for (Method declaredMethod : declaredMethods) {
+            if (declaredMethod.getName().equals("printNameWater")) {
+                declaredMethod.setAccessible(true);
+                declaredMethod.invoke(water, "Borjomi");
+            }
+        }
+
     }
 }
