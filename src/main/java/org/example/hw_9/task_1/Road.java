@@ -24,6 +24,7 @@ public class Road {
                         System.out.print(emptySymbol);
                     }
                 }
+
                 rightBorder--;
                 System.out.println(printingIndex);
                 time--;
@@ -36,6 +37,7 @@ public class Road {
                         System.out.print(emptySymbol);
                     }
                 }
+
                 leftBorder++;
                 System.out.println(printingIndex);
                 time--;
