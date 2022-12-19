@@ -3,6 +3,8 @@ package org.example.hw_10.task_7;
 public class CarWarehouse {
     private String brandCar;
     private double motor;
+    
+    // private Car[] cars;
 
     public CarWarehouse(String brandCar, double motor) {
         this.brandCar = brandCar;
