@@ -8,15 +8,14 @@ public class Road {
         Scanner road = new Scanner(System.in);
         System.out.println("Enter travel time in seconds, please");
         int time = road.nextInt();
-
         String emptySymbol = " ";
         int width = 10;
-        int rightBorder = 10;
-        int leftBorder = 0;
-        String printingIndex = "||  |  ||";
+        String printingRoad = "||  |  ||";
+        long startTime = System.currentTimeMillis();
 
         while (time > 0) {
-
+            int rightBorder = 10;
+            int leftBorder = 0;
             for (int i = 0; i < width; i++) {
 
                 for (int j = 0; j < width; j++) {
@@ -26,22 +25,24 @@ public class Road {
                 }
 
                 rightBorder--;
-                System.out.println(printingIndex);
+                System.out.println(printingRoad);
                 time--;
             }
 
-            for (int i = 0; i < width + 1; i++) {
+            for (int i = 0; i < width; i++) {
 
-                for (int j = 0; j < width + 1; j++) {
+                for (int j = 0; j < width; j++) {
                     if (j < leftBorder) {
                         System.out.print(emptySymbol);
                     }
                 }
 
                 leftBorder++;
-                System.out.println(printingIndex);
+                System.out.println(printingRoad);
                 time--;
             }
         }
+        long finishTime = System.currentTimeMillis();
+        System.out.println(finishTime - startTime);
     }
 }
