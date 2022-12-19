@@ -32,5 +32,12 @@ public class TextMain {
                 System.out.println("plan count = " + planCount);
             }
         }
+        
+        /*
+        System.out.println("alert count = " + alertCount);
+        System.out.println("add count = " + addCount);
+        System.out.println("good count = " + goodCount);
+        System.out.println("plan count = " + planCount);
+        */
     }
 }
