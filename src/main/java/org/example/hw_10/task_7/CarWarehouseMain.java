@@ -10,7 +10,7 @@ public class CarWarehouseMain {
 
         for (int i = 0; i < cars.length; i++) {
             if (cars[i].toString().contains("1.4")) {
-                System.out.println(cars[i].toString().replace("1.4", "2.0T"));
+                System.out.println(cars[i].toString().replace("1.4", "2.0T")); // меняем значение переменной у класса, а не у строки из методы toString()
             } else {
                 if (cars[i].toString().contains("1.8")) {
                     System.out.println(cars[i].toString().replace("1.8", "1.8T"));
