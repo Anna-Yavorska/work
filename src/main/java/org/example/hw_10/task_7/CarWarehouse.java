@@ -2,7 +2,7 @@ package org.example.hw_10.task_7;
 
 public class CarWarehouse {
     private String brandCar;
-    private double motor;
+    private double motor; // double -> String
     
     // private Car[] cars;
 
