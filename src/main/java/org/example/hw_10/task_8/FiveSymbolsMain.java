@@ -1,8 +1,9 @@
 package org.example.hw_10.task_8;
 
+//+
 public class FiveSymbolsMain {
     public static void main(String[] args) {
-        String[] animalNames = new String[6];
+        String[] animalNames = new String[6]; //  animals
         animalNames[0] = "Lion";
         animalNames[1] = "Elephant";
         animalNames[2] = "Tiger";
