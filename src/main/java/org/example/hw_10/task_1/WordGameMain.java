@@ -4,13 +4,12 @@ import java.util.Arrays;
 
 public class WordGameMain {
     public static void main(String[] args) {
-        StringBuilder stringBuilder = new StringBuilder("engineering");
-        stringBuilder.replace(6, 7, " ");
-        System.out.println(stringBuilder);
-       
-        /*
         String engineering = "engineering";
-        engineering.substring()
-        */
+        String engine = engineering.substring(0, 6);
+        String ring = engineering.substring(7);
+
+        System.out.println(engine);
+        System.out.println(ring);
+
     }
 }

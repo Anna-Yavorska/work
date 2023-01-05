@@ -9,35 +9,29 @@ public class TextMain {
 
         String[] words = text.split(" ");
 
-        int addCount = 0;
-        int goodCount = 0;
-        int alertCount = 0;
-        int planCount = 0;
+        int wordAlertCount = 0;
+        int wordAddCount = 0;
+        int wordGoodCount = 0;
+        int wordPlanCount = 0;
 
         for (int i = 0; i < words.length; i++) {
             if (words[i].contains("alert")) {
-                ++alertCount;
-                System.out.println("alert count = " + alertCount);
+                ++wordAlertCount;
             }
             if (words[i].contains("add")) {
-                ++addCount;
-                System.out.println("add count = " + addCount);
+                ++wordAddCount;
             }
             if (words[i].contains("good")) {
-                ++goodCount;
-                System.out.println("good count = " + goodCount);
+                ++wordGoodCount;
             }
             if (words[i].contains("plan")) {
-                ++planCount;
-                System.out.println("plan count = " + planCount);
+                ++wordPlanCount;
             }
         }
-        
-        /*
-        System.out.println("alert count = " + alertCount);
-        System.out.println("add count = " + addCount);
-        System.out.println("good count = " + goodCount);
-        System.out.println("plan count = " + planCount);
-        */
+
+        System.out.println("word alert count = " + wordAlertCount);
+        System.out.println("word add count = " + wordAddCount);
+        System.out.println("word good count = " + wordGoodCount);
+        System.out.println("word plan count = " + wordPlanCount);
     }
 }

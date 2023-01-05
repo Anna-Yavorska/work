@@ -2,12 +2,18 @@ package org.example.hw_10.task_7;
 
 public class CarWarehouse {
     private String brandCar;
-    private double motor; // double -> String
-    
-    // private Car[] cars;
+    private String motor;
 
-    public CarWarehouse(String brandCar, double motor) {
+    public CarWarehouse(String brandCar, String motor) {
         this.brandCar = brandCar;
+        this.motor = motor;
+    }
+
+    public String getMotor() {
+        return motor;
+    }
+
+    public void setMotor(String motor) {
         this.motor = motor;
     }
 

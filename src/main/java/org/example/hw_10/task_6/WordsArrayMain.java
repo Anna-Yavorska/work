@@ -4,26 +4,28 @@ import java.util.Arrays;
 
 public class WordsArrayMain {
     public static void main(String[] args) {
-        String[] strings = new String[6]; // string -> words
-        strings[0] = "Good";
-        strings[1] = "Tree";
-        strings[2] = "World";
-        strings[3] = "weather";
-        strings[4] = "lamp";
-        strings[5] = "Wow";
+        String[] words = new String[6];
+        words[0] = "Good";
+        words[1] = "Tree";
+        words[2] = "World";
+        words[3] = "weather";
+        words[4] = "lamp";
+        words[5] = "Wow";
 
-        // StringBuiler filteredWordsByComma;
-        for (int i = 0; i < strings.length; i++) {
-            if (strings[i].startsWith("w")) { // "w" - должно быть в переменной
-                System.out.println(strings[i]);
-            }
-            if (strings[i].startsWith("W")) { // "W" - должно быть в переменной
-                System.out.println(strings[i]);
+        String filterSymbol = "W";
+        String separatorSign = ",";
+
+        StringBuilder filteredWords = new StringBuilder();
+
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].toUpperCase().startsWith(filterSymbol)) {
+                filteredWords.append(words[i]);
+                filteredWords.append(separatorSign);
             }
         }
-        
-        /*
-        String[] filteredWords;
-        */
+
+        String filteredWordsByComma = filteredWords.toString();
+        String[] filteredArray = filteredWordsByComma.split(separatorSign);
+        System.out.println(Arrays.toString(filteredArray));
     }
 }

@@ -3,17 +3,19 @@ package org.example.hw_10.task_8;
 //+
 public class FiveSymbolsMain {
     public static void main(String[] args) {
-        String[] animalNames = new String[6]; //  animals
-        animalNames[0] = "Lion";
-        animalNames[1] = "Elephant";
-        animalNames[2] = "Tiger";
-        animalNames[3] = "Crocodile";
-        animalNames[4] = "Zebra";
-        animalNames[5] = "Giraffe";
+        String[] animals = new String[6];
+        animals[0] = "Lion";
+        animals[1] = "Elephant";
+        animals[2] = "Tiger";
+        animals[3] = "Crocodile";
+        animals[4] = "Zebra";
+        animals[5] = "Giraffe";
 
-        for (int i = 0; i < animalNames.length; i++) {
-            if (animalNames[i].length() > 5) {
-                System.out.println(animalNames[i]);
+        int stringLength = 5;
+
+        for (int i = 0; i < animals.length; i++) {
+            if (animals[i].length() > stringLength) {
+                System.out.println(animals[i]);
             }
         }
     }
