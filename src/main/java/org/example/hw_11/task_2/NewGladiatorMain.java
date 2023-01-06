@@ -5,11 +5,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-public class NewGladiatorMain extends Players {
+public class NewGladiatorMain extends Players { // класс с методом main не должен наследоваться
     public static void main(String[] args) throws IOException {
         Players names = new Players();
         Scanner newPlayer = new Scanner(System.in);
-        BufferedReader enter = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader enter = new BufferedReader(new InputStreamReader(System.in)); // этого на лекциях еще не было.
         System.out.println("Please, enter your gladiator's name");
         String nameNewGladiator = newPlayer.next();
 
