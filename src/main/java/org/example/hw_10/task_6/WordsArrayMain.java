@@ -20,7 +20,7 @@ public class WordsArrayMain {
         for (int i = 0; i < words.length; i++) {
             if (words[i].toUpperCase().startsWith(filterSymbol)) {
                 filteredWords.append(words[i]);
-                filteredWords.append(separatorSign);
+                  filteredWords.append(separatorSign);
             }
         }
 
