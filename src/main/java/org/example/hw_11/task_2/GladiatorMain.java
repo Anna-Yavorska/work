@@ -1,52 +1,53 @@
 package org.example.hw_11.task_2;
 
-import java.io.IOException;
+import java.util.Random;
 import java.util.Scanner;
 
-public class GladiatorMain  {
-    public static void main(String[] args) throws IOException {
-        Scanner newGladiator = new Scanner(System.in);
-        System.out.println("Please, enter your gladiator's name");
-        String nameNewGladiator = newGladiator.next();
+public class GladiatorMain {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        GladiatorComputerNameService nameService = new GladiatorComputerNameService();
 
-        ComputerGladiatorName[] opponentName = ComputerGladiatorName.values();
-        int numberName = (int) Math.floor(Math.random() * opponentName.length);
+        System.out.println("Введите имя игрока");
+        String gladiatorName = scanner.next();
+        String computerName = nameService.generateName();
+        System.out.println("Cейчас будет битва между " + gladiatorName + " vs " + computerName);
+        System.out.println("Нажмите enter, если готовы играть");
+        String enter = scanner.next();
 
-        System.out.println("Now there will be a battle between " + nameNewGladiator + " vs " + opponentName[numberName]);
-        System.out.println(nameNewGladiator + ", are you ready?");
-        String ready = newGladiator.next();
+        GladiatorFightService fightService = new GladiatorFightService();
+        Gladiator userGladiator = new Gladiator(gladiatorName, 100);
+        Gladiator computerGladiator = new Gladiator(computerName, 100);
+        Random random = new Random();
 
-        int lifeComputer = 4;
-        int lifeUser = 4;
-
-        for (int i = 0; ; i++) {
-            int numberProtectionOf = 0;
-            int numberAttackOf = 0;
-            if (lifeComputer == 0 || lifeUser == 0) {
-                System.out.println("The game is over");
-                return;
+        while (true) {
+            System.out.println("""
+                    Куда бъём?
+                    0 - High kick
+                    1 - Middle kick
+                    2 - Low kick
+                    """);
+            int attackIndex = scanner.nextInt();
+            int injury = fightService.attack(attackIndex, computerGladiator);
+            System.out.println("Здоровье комрьютера = " + computerGladiator.getHealth());
+            if (computerGladiator.getHealth() <= 0) {
+                System.out.println("Битва окончена, вы победили!");
+                break;
             }
-
-            System.out.println("Select strike number from 0 to 2");
-            numberAttackOf = newGladiator.nextInt();
-            System.out.println(UserGladiator.attack[numberAttackOf]);
-            System.out.println(UserGladiator.protection[UserGladiator.numberProtection]);
-
-            if (numberAttackOf != UserGladiator.numberProtection) {
-                lifeComputer= lifeComputer - 1;
+            int computerAttackIndex = random.nextInt(AttackOption.values().length);
+            System.out.println("""
+                    Какой блок поставите?
+                    0 - High block
+                    1 - Middle block
+                    2 - Low block
+                    """);
+            int defendIndex = scanner.nextInt();
+            fightService.defend(defendIndex, userGladiator);
+            System.out.println("Ваше здоровье = " + userGladiator.getHealth());
+            if (userGladiator.getHealth() <= 0) {
+                System.out.println("Битва окончена, вы проиграли!");
+                break;
             }
-
-            int attackComputer = UserGladiator.numberAttack;
-            System.out.println(UserGladiator.attack[attackComputer]);
-            System.out.println("Select protection number from 0 to 2");
-            numberProtectionOf = newGladiator.nextInt();
-            System.out.println(UserGladiator.protection[numberProtectionOf]);
-
-            if (attackComputer != numberProtectionOf) {
-                lifeUser= lifeUser - 1;
-            }
-
         }
-
     }
 }

@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 public class QuantityAnnotationValidationService implements LegoAnnotationService {
     @Override
     public LegoValidationResult validate(Object object) throws IllegalAccessException {
+        LegoValidationResult  legoValidationResult = new LegoValidationResult();
 
         Field[] declaredFields = object.getClass().getDeclaredFields();
 
@@ -23,6 +24,8 @@ public class QuantityAnnotationValidationService implements LegoAnnotationServic
                     Integer integerFieldValue = (Integer) fieldValue;
 
                     boolean validationResult = integerFieldValue > min && integerFieldValue < max;
+                    legoValidationResult.setValidationPassed(false);
+                    legoValidationResult.setMessage("Details quantity must be from 5 to 30");
                 }
             }
         }
