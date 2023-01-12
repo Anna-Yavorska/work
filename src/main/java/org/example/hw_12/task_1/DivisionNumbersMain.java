@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class DivisionNumbersMain {
     public static void main(String[] args) {
-        DivisionNumbersService divisionNumbers = new DivisionNumbersService();
-        Scanner scanner = new Scanner(System.in);
+        DivisionNumbersService divisionNumbers = new DivisionNumbersService(); // эту строку лучше тоже перенести в блок try, хотя технически ок
+        Scanner scanner = new Scanner(System.in); // эту строку лучше тоже перенести в блок try, хотя технически ок
 
         try {
             System.out.println("Введите делимое:");
