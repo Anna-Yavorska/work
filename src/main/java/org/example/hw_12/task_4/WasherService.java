@@ -3,7 +3,7 @@ package org.example.hw_12.task_4;
 public class WasherService {
     private boolean electricity = true;
 
-    public void turnLaundry() {
+    public void turnLaundry() { // turnLaundry -> turnOnLaundry
         try {
             if (electricity) {
                 System.out.println("Процесс запущен");
@@ -21,7 +21,8 @@ public class WasherService {
 
     public boolean isElectricity() {
         System.out.println("Электричество есть");
-        return true;
+        return true; // у тебя метод всегда тру возвращает, не лучшее решение
+        // return electricity;
     }
 
     public void setElectricity(boolean electricity) {
