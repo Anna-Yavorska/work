@@ -21,7 +21,7 @@ public class WasherService {
 
     public boolean isElectricity() {
         System.out.println("Электричество есть");
-        return true; // у тебя метод всегда тру возвращает, не лучшее решение
+        return true; // у тебя метод всегда true возвращает, не лучшее решение
         // return electricity;
     }
 
