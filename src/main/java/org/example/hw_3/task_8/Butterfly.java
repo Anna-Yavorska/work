@@ -2,7 +2,7 @@ package org.example.hw_3.task_8;
 
 public class Butterfly {
     public static void main(String[] args) {
-        int size = 12;
+        int size = 18;
         int leftBorder = 1;
         int rightBorder = size;
         int mid = size / 2;
@@ -14,10 +14,10 @@ public class Butterfly {
                     System.out.print(printingIndex);
                 } else {
                     if (j < mid) {
-                        System.out.print("0");
+                        System.out.print(emptySymbol);
                     } else {
                         if (j < rightBorder) {
-                            System.out.print("0");
+                            System.out.print(emptySymbol);
                         } else {
                             System.out.print(printingIndex);
                         }
@@ -47,7 +47,7 @@ public class Butterfly {
                         System.out.print(printingIndex);
                         printingIndex--;
                     } else {
-                        System.out.print("0");
+                        System.out.print(emptySymbol);
                     }
                 }
                 if (j < size) {

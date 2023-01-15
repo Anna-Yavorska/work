@@ -5,9 +5,9 @@ public class WasherMain {
         WasherService washer = new WasherService();
         try {
             washer.isElectricity();
-            washer.turnLaundry();
+            washer.turnOnLaundry();
             washer.setElectricity(false);
-            washer.turnLaundry();
+            washer.turnOnLaundry();
 
         } finally {
             washer.drainWater();

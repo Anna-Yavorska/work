@@ -4,17 +4,15 @@ import java.util.Scanner;
 
 public class DivisionNumbersMain {
     public static void main(String[] args) {
-        DivisionNumbersService divisionNumbers = new DivisionNumbersService(); // эту строку лучше тоже перенести в блок try, хотя технически ок
-        Scanner scanner = new Scanner(System.in); // эту строку лучше тоже перенести в блок try, хотя технически ок
 
         try {
+            DivisionNumbersService divisionNumbers = new DivisionNumbersService();
+            Scanner scanner = new Scanner(System.in);
             System.out.println("Введите делимое:");
-            divisionNumbers.setDividend(scanner.nextInt());
-
+            int dividend = scanner.nextInt();
             System.out.println("Введите делитель:");
-            divisionNumbers.setDivisor(scanner.nextInt());
-
-            divisionNumbers.divideNumbers();
+            int divisor = scanner.nextInt();
+            divisionNumbers.divideNumbers(dividend, divisor);
         } catch (ArithmeticException zero) {
             System.out.println("На ноль делить нельзя!");
         }

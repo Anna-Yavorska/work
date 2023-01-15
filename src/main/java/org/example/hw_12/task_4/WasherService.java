@@ -3,14 +3,14 @@ package org.example.hw_12.task_4;
 public class WasherService {
     private boolean electricity = true;
 
-    public void turnLaundry() { // turnLaundry -> turnOnLaundry
+    public void turnOnLaundry() {
         try {
             if (electricity) {
                 System.out.println("Процесс запущен");
             } else {
-                throw new ElectricityIsOffException();
+                throw new ElectricityException();
             }
-        } catch (ElectricityIsOffException electricityOff) {
+        } catch (ElectricityException electricityOff) {
             System.out.println("Электричества нет, все процессы остановлены!");
         }
     }
@@ -21,8 +21,7 @@ public class WasherService {
 
     public boolean isElectricity() {
         System.out.println("Электричество есть");
-        return true; // у тебя метод всегда true возвращает, не лучшее решение
-        // return electricity;
+        return electricity;
     }
 
     public void setElectricity(boolean electricity) {
