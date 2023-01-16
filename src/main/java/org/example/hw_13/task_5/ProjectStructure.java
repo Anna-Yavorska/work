@@ -35,5 +35,19 @@ public class ProjectStructure {
             }
         } while (!project.exists());
     }
+    
+    // тебе нужен рекурсивный метод, примерно так он должен выглядеть
+    /*
+    private static void printTree(File[] files) {
+        for (int i = 0; i < files.length; i++ {
+            if(files[i].isDirectory) {
+            printTree(files[i])
+            } else {
+            sout(file.getName())
+            }
+        }
+    }
+    */
+    
 
 }
