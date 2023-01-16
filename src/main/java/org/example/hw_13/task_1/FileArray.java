@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public class FileArray {
     private static final String WAY_TO_ARRAY = "src/main/java/org/example/hw_13/task_1/Array"; // WAY_TO_ARRAY -> OUTPUT_FILE_PATH
+    // Array - лучше назвать файл Array_output, так быстрее можно понять что скорее всего содержится в файле
 
     public static void main(String[] args) {
         try (FileOutputStream fos = new FileOutputStream(WAY_TO_ARRAY, true)) {
