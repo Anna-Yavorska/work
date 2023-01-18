@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 public class GarageMain {
     public static void main(String[] args) {
+        /* класс называется гараж, а ты туда кладешь массив строк. Сделай interface Car и привяжи к нему марки авто,
+        дженериком для гаража будет Car и ты сможешь туда загнать любое авто
+        */
         SharedGarage<String> allCars = new SharedGarage<>(new String[]{"Toyota", "Audi"});
         String[] allCarsBrand = allCars.getCarBrand();
 
@@ -16,6 +19,6 @@ public class GarageMain {
         System.out.println(Arrays.toString(allCarsBrand));
         System.out.println(Arrays.toString(bmwBrand));
         System.out.println(Arrays.toString(ladaBrand));
-
+// лишняя строка
     }
 }
