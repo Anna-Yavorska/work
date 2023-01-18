@@ -8,6 +8,7 @@ public class ClipperMain {
         DogClipper<Integer> dogClipper = new DogClipper<>(new Integer[]{1, 2, 3});
         String typeOfDogClipper = dogClipper.getTypeOfClipper();
 
+        // new BeardMachine<Trimmer> - Trimmer лучше убрать. Это не ошибка, но лишнее
         BeardMachine<Trimmer> trimmer = new BeardMachine<Trimmer>(new Trimmer[]{new Trimmer("Philips", true)});
         String typeOfTrimmer = trimmer.getTypeOfClipper();
 
