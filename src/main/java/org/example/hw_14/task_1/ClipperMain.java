@@ -14,6 +14,6 @@ public class ClipperMain {
         System.out.println(typeOfHairClipper);
         System.out.println(typeOfDogClipper);
         System.out.println(typeOfTrimmer);
-
+//лишняя строка
     }
 }
