@@ -4,50 +4,25 @@ import java.io.*;
 
 public class ProjectStructure {
     private static final String WAY_TO_PROJECT = "src/main/java/org/example";
-
     public static void main(String[] args) {
         File project = new File(WAY_TO_PROJECT);
-        do {
-            File[] files = project.listFiles();
-            for (int i = 0; i < files.length; i++) {
-                System.out.println(files[i].getName());
-                if (files[i] == null) {
-                    break;
-                } else {
-                    if (files[i].isDirectory()) {
-                        File[] inFiles = files[i].listFiles();
-
-                        for (int j = 0; j < inFiles.length; j++) {
-                            File[] inTheFiles = inFiles[j].listFiles();
-                            System.out.println("\t" + inFiles[j].getName());
-                            if (inFiles[j] != null) {
-                            }
-
-                            for (int k = 0; k < inTheFiles.length; k++) {
-                                if (inTheFiles[k] != null) {
-                                    System.out.println("\t\t" + inTheFiles[k].getName());
-                                }
-                            }
-                        }
-                    }
-
-                }
-            }
-        } while (!project.exists());
+        printCatalogs(new File[]{project}, "");
     }
-    
-    // тебе нужен рекурсивный метод, примерно так он должен выглядеть
-    /*
-    private static void printTree(File[] files) {
-        for (int i = 0; i < files.length; i++ {
-            if(files[i].isDirectory) {
-            printTree(files[i])
+    private static void printCatalogs(File[] files, String margin) {
+        for (int i = 0; i < files.length; i++) {
+            File file = files[i];
+            if (file.isDirectory()) {
+                System.out.println(margin + file.getName());
+                margin = "";
+            }
+            if (file.isFile()) {
+                System.out.println(margin + " " + file.getName());
+                margin += " ";
             } else {
-            sout(file.getName())
+                File[] directoryFiles = file.listFiles();
+                printCatalogs(directoryFiles, margin);
+                System.out.print(margin);
             }
         }
     }
-    */
-    
-
 }
