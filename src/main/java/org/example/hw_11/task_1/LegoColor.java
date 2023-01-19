@@ -1,4 +1,4 @@
-package org.example.hw_7.task_1;
+package org.example.hw_11.task_1;
 
 public enum LegoColor {
     RED,
