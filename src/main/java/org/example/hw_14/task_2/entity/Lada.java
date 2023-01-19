@@ -4,7 +4,7 @@ import org.example.hw_14.task_2.entity.Car;
 
 public class Lada implements Car {
     private String lada;
-
+// эта строка не нужна
     private String type;
 
     public Lada(String lada, String type) {
