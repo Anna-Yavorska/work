@@ -1,9 +1,11 @@
-package org.example.hw_14.task_2;
+package org.example.hw_14.task_2.entity;
 
-public class Lada {
+import org.example.hw_14.task_2.entity.Car;
+
+public class Lada implements Car {
     private String lada;
 
-    public String type;
+    private String type;
 
     public Lada(String lada, String type) {
         this.lada = lada;

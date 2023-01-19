@@ -1,6 +1,6 @@
-package org.example.hw_14.task_2;
+package org.example.hw_14.task_2.entity;
 
-public class BMW {
+public class BMW implements Car {
     private String letter;
     private int number;
 
@@ -11,6 +11,6 @@ public class BMW {
 
     @Override
     public String toString() {
-        return letter + number;
+        return "BMW " + letter + number;
     }
 }

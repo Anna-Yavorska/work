@@ -1,24 +1,22 @@
 package org.example.hw_14.task_2;
 
+import org.example.hw_14.task_2.entity.*;
+
 import java.util.Arrays;
 
 public class GarageMain {
     public static void main(String[] args) {
-        /* класс называется гараж, а ты туда кладешь массив строк. Сделай interface Car и привяжи к нему марки авто,
-        дженериком для гаража будет Car и ты сможешь туда загнать любое авто
-        */
-        SharedGarage<String> allCars = new SharedGarage<>(new String[]{"Toyota", "Audi"});
-        String[] allCarsBrand = allCars.getCarBrand();
+        Garage<Car> car = new Garage<>(new Car[]{new Mazda("MAZDA", "CX", 30), new BMW("x", 5), new Lada("LADA", "Niva")});
+        Car[] allCarBrand = car.getCarBrand();
 
-        BMWGarage bmw = new BMWGarage(new BMW[]{new BMW("x", 1), new BMW("M", 3)});
-        BMW[] bmwBrand = bmw.getCarBrand();
+        Garage<BMW> bmw = new Garage<>(new BMW[]{new BMW("x", 1), new BMW("M", 3)});
+        BMW[] bmwCarBrand = bmw.getCarBrand();
 
-        LadaGarage lada = new LadaGarage(new Lada[]{new Lada("LADA", "Vesta"), new Lada("LADA", "Niva")});
-        Lada[] ladaBrand = lada.getCarBrand();
+        Garage<Lada> lada = new Garage<>(new Lada[]{new Lada("LADA", "Vesta"), new Lada("LADA", "Niva")});
+        Lada[] ladaCarBrand = lada.getCarBrand();
 
-        System.out.println(Arrays.toString(allCarsBrand));
-        System.out.println(Arrays.toString(bmwBrand));
-        System.out.println(Arrays.toString(ladaBrand));
-// лишняя строка
+        System.out.println(Arrays.toString(allCarBrand));
+        System.out.println(Arrays.toString(bmwCarBrand));
+        System.out.println(Arrays.toString(ladaCarBrand));
     }
 }
