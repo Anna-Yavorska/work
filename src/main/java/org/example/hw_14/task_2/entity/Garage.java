@@ -1,14 +1,13 @@
 package org.example.hw_14.task_2.entity;
 
-public class Garage<Car> { // у тебя Car - это название интерфейса, лучше не использовать одинаковые названия. 
-    // Тем более по факту с таким generic у тебя в гараже может быть абсолютно любой класс
-    private Car[] carBrand;
+public class Garage<T extends Car> {
+    private T[] tBrand;
 
-    public Garage(Car[] carBrand) {
-        this.carBrand = carBrand;
+    public Garage(T[] tBrand) {
+        this.tBrand = tBrand;
     }
 
-    public Car[] getCarBrand() {
-        return carBrand;
+    public T[] getCarBrand() {
+        return tBrand;
     }
 }

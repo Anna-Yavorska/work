@@ -1,15 +1,13 @@
-package org.example.hw_14.task_1.entity;
+package org.example.hw_14.task_1;
 
-public class Clipper<T> { // этот класс не подходит под понятие сущность (entity). Это скорее класс Service, который выполняет какую-либо логику.
-    // Думаю даже можно его переименовать в ClipperService
+public class ClipperService<T> {
     private T typeOfClipper;
 
-    public Clipper(T typeOfClipper) {
+    public ClipperService(T typeOfClipper) {
         this.typeOfClipper = typeOfClipper;
     }
 
     public String getTypeOfClipper() {
-        String type = typeOfClipper.getClass().getName(); // можно сократить до return typeOfClipper.getClass().getName();
-        return type;
+        return typeOfClipper.getClass().getName();
     }
 }
