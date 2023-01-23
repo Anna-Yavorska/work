@@ -3,6 +3,7 @@ package org.example.hw_15.task_1;
 import java.util.List;
 import java.util.Scanner;
 
+//+
 public class PartyMain {
     public static void main(String[] args) {
         List<String> invitedNames = List.of("Egorka", "Roman", "Lena", "Marina");
