@@ -9,26 +9,26 @@ public class BenchmarkBegin {
         List<Integer> fiveArrayList = new ArrayList<>();
         fill(fiveArrayList);
         System.out.println("Quantity of ArrayList = " + fiveArrayList.size());
-        long startArrayList = System.currentTimeMillis();
+        long startArrayList = System.currentTimeMillis(); // startArrayList -> startTimeArrayList
         removeBegin(fiveArrayList);
-        long finishArrayList = System.currentTimeMillis();
+        long finishArrayList = System.currentTimeMillis(); // finishArrayList -> finishTimeArrayList
         System.out.println("ArrayList time = " + (finishArrayList - startArrayList));
         System.out.println("Quantity of ArrayList = " + fiveArrayList.size());
 
         List<Integer> fiveLinkedList = new LinkedList<>();
         fill(fiveLinkedList);
         System.out.println("Quantity of LinkedList = " + fiveLinkedList.size());
-        long startLinkedList = System.currentTimeMillis();
+        long startLinkedList = System.currentTimeMillis(); // startLinkedList -> startTimeLinkedList
         removeBegin(fiveLinkedList);
-        long finishLinkedList = System.currentTimeMillis();
+        long finishLinkedList = System.currentTimeMillis(); // finishLinkedList -> finishTimeLinkedList
         System.out.println("LinkedList time = " + (finishLinkedList - startLinkedList));
         System.out.println("Quantity of LinkedList = " + fiveLinkedList.size());
     }
 
     private static void fill(List<Integer> list) {
-        int quantity = 100_000;
+        int quantity = 100_000; // кол-во лучше аргументом в метод
         for (int i = 0; i < quantity; i++) {
-            list.add(5);
+            list.add(5); // 5 -> i. Разницы особо нету, но выглядит странно
         }
     }
 
