@@ -10,24 +10,24 @@ public class BenchmarkMiddle {
         List<String> shoeStore = new ArrayList<>();
         fill(shoeStore);
         System.out.println("Quantity of ArrayList = " + shoeStore.size());
-        long startArrayList = System.currentTimeMillis();
+        long startArrayList = System.currentTimeMillis(); // startArrayList - хорошее название для первого элемента листа. startTimeArrayList
         removeMiddle(shoeStore);
-        long finishArrayList = System.currentTimeMillis();
+        long finishArrayList = System.currentTimeMillis(); // finishTimeArrayList 
         System.out.println("ArrayList time = " + (finishArrayList - startArrayList));
         System.out.println("Quantity of ArrayList = " + shoeStore.size());
 
         List<String> shoeShoeStore = new LinkedList<>();
         fill(shoeShoeStore);
         System.out.println("Quantity of LinkedList = " + shoeShoeStore.size());
-        long startLinkedList = System.currentTimeMillis();
+        long startLinkedList = System.currentTimeMillis(); // startTimeLinkedList
         removeMiddle(shoeShoeStore);
-        long finishLinkedList = System.currentTimeMillis();
+        long finishLinkedList = System.currentTimeMillis(); // finishTimeLinkedList
         System.out.println("LinkedList time = " + (finishLinkedList - startLinkedList));
         System.out.println("Quantity of LinkedList = " + shoeShoeStore.size());
     }
 
     private static void fill(List<String> list) {
-        int quantity = 100_000;
+        int quantity = 100_000; // этот параметр лучше передать аргументом в метод
         for (int i = 0; i < quantity; i++) {
             list.add("Sneakers");
         }
