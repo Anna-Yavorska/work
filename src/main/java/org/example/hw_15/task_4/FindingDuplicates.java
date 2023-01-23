@@ -5,6 +5,7 @@ import java.util.List;
 
 public class FindingDuplicates {
     public static void main(String[] args) {
+        // carsToys - а зачем в названии Toys?
         List<String> carsToys = new ArrayList<>(List.of("Mazda", "Toyota", "BMW", "LADA", "Infinity", "Renault", "Jaguar"));
         List<String> cars = new ArrayList<>(List.of("Mazda", "BMW", "BMW", "LADA", "LADA", "Renault", "Mazda"));
 
