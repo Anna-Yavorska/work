@@ -1,4 +1,6 @@
-package org.example.hw_15.task_7;
+package org.example.hw_15.task_5.task_7;
+
+import java.util.Objects;
 
 public class Shop {
     private String name;
@@ -7,6 +9,23 @@ public class Shop {
     public Shop(String name, long id) {
         this.name = name;
         this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Shop shop = (Shop) o;
+        return Objects.equals(id, shop.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 
     @Override
