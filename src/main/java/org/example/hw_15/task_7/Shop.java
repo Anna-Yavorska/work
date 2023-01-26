@@ -1,4 +1,4 @@
-package org.example.hw_15.task_5.task_7;
+package org.example.hw_15.task_7;
 
 import java.util.Objects;
 
@@ -13,19 +13,15 @@ public class Shop {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         Shop shop = (Shop) o;
-        return Objects.equals(id, shop.id);
+        return id == shop.id && Objects.equals(name, shop.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(name, id);
     }
 
     @Override

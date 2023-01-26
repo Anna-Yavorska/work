@@ -7,27 +7,28 @@ import java.util.List;
 
 public class BenchmarkMiddle {
     public static void main(String[] args) {
+        int quantity = 100_000;
+
         List<String> shoeStore = new ArrayList<>();
-        fill(shoeStore);
+        fill(shoeStore, quantity);
         System.out.println("Quantity of ArrayList = " + shoeStore.size());
-        long startArrayList = System.currentTimeMillis(); // startArrayList - хорошее название для первого элемента листа. startTimeArrayList
+        long startTimeArrayList = System.currentTimeMillis();
         removeMiddle(shoeStore);
-        long finishArrayList = System.currentTimeMillis(); // finishTimeArrayList 
-        System.out.println("ArrayList time = " + (finishArrayList - startArrayList));
+        long finishTimeArrayList = System.currentTimeMillis();
+        System.out.println("ArrayList time = " + (finishTimeArrayList - startTimeArrayList));
         System.out.println("Quantity of ArrayList = " + shoeStore.size());
 
         List<String> shoeShoeStore = new LinkedList<>();
-        fill(shoeShoeStore);
+        fill(shoeShoeStore, quantity);
         System.out.println("Quantity of LinkedList = " + shoeShoeStore.size());
-        long startLinkedList = System.currentTimeMillis(); // startTimeLinkedList
+        long startTimeLinkedList = System.currentTimeMillis();
         removeMiddle(shoeShoeStore);
-        long finishLinkedList = System.currentTimeMillis(); // finishTimeLinkedList
-        System.out.println("LinkedList time = " + (finishLinkedList - startLinkedList));
+        long finishTimeLinkedList = System.currentTimeMillis();
+        System.out.println("LinkedList time = " + (finishTimeLinkedList - startTimeLinkedList));
         System.out.println("Quantity of LinkedList = " + shoeShoeStore.size());
     }
 
-    private static void fill(List<String> list) {
-        int quantity = 100_000; // этот параметр лучше передать аргументом в метод
+    private static void fill(List<String> list, int quantity) {
         for (int i = 0; i < quantity; i++) {
             list.add("Sneakers");
         }

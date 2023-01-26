@@ -6,29 +6,29 @@ import java.util.List;
 
 public class BenchmarkBegin {
     public static void main(String[] args) {
+        int quantity = 100_000;
         List<Integer> fiveArrayList = new ArrayList<>();
-        fill(fiveArrayList);
+        fill(fiveArrayList, quantity);
         System.out.println("Quantity of ArrayList = " + fiveArrayList.size());
-        long startArrayList = System.currentTimeMillis(); // startArrayList -> startTimeArrayList
+        long startTimeArrayList = System.currentTimeMillis();
         removeBegin(fiveArrayList);
-        long finishArrayList = System.currentTimeMillis(); // finishArrayList -> finishTimeArrayList
-        System.out.println("ArrayList time = " + (finishArrayList - startArrayList));
+        long finishTimeArrayList = System.currentTimeMillis();
+        System.out.println("ArrayList time = " + (finishTimeArrayList - startTimeArrayList));
         System.out.println("Quantity of ArrayList = " + fiveArrayList.size());
 
         List<Integer> fiveLinkedList = new LinkedList<>();
-        fill(fiveLinkedList);
+        fill(fiveLinkedList, quantity);
         System.out.println("Quantity of LinkedList = " + fiveLinkedList.size());
-        long startLinkedList = System.currentTimeMillis(); // startLinkedList -> startTimeLinkedList
+        long startTimeLinkedList = System.currentTimeMillis();
         removeBegin(fiveLinkedList);
-        long finishLinkedList = System.currentTimeMillis(); // finishLinkedList -> finishTimeLinkedList
-        System.out.println("LinkedList time = " + (finishLinkedList - startLinkedList));
+        long finishTimeLinkedList = System.currentTimeMillis();
+        System.out.println("LinkedList time = " + (finishTimeLinkedList - startTimeLinkedList));
         System.out.println("Quantity of LinkedList = " + fiveLinkedList.size());
     }
 
-    private static void fill(List<Integer> list) {
-        int quantity = 100_000; // кол-во лучше аргументом в метод
+    private static void fill(List<Integer> list, int quantity) {
         for (int i = 0; i < quantity; i++) {
-            list.add(5); // 5 -> i. Разницы особо нету, но выглядит странно
+            list.add(i);
         }
     }
 

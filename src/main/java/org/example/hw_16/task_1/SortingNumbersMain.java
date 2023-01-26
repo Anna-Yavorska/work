@@ -3,7 +3,7 @@ package org.example.hw_16.task_1;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class SortingNumbers {
+public class SortingNumbersMain {
     public static void main(String[] args) {
         NumberComparator comparator = new NumberComparator();
         Set<Integer> numbers = new TreeSet<>(comparator);
