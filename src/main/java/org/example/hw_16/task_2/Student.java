@@ -1,8 +1,8 @@
 package org.example.hw_16.task_2;
 
 public class Student implements Comparable<Student> {
-    String name //private
-    String surname; //private
+    private String name;
+    private String surname;
 
     public Student(String name, String surname) {
         this.name = name;

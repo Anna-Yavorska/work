@@ -1,11 +1,13 @@
 package org.example.hw_16.task_3;
 
+import java.util.Objects;
+
 public class Fruit {
     private String name;
     private Integer weight;
-    private String type;
+    private FruitType type;
 
-    public Fruit(String name, Integer weight, String type) {
+    public Fruit(String name, Integer weight, FruitType type) {
         this.name = name;
         this.weight = weight;
         this.type = type;
@@ -27,12 +29,25 @@ public class Fruit {
         this.weight = weight;
     }
 
-    public String getType() {
+    public FruitType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(FruitType type) {
         this.type = type;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Fruit fruit = (Fruit) o;
+        return Objects.equals(name, fruit.name) && Objects.equals(weight, fruit.weight) && Objects.equals(type, fruit.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, weight, type);
     }
 
     @Override

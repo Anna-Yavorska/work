@@ -4,22 +4,23 @@ import java.util.*;
 
 public class FruitMain {
     public static void main(String[] args) {
-        Comparator <Fruit> comparator = new ComparatorType();
-        List<Fruit> fruits = new ArrayList<>();
-        fruits.add( new Fruit("Lemon", 10, "Citrus"));
-        fruits.add( new Fruit("Mandarin", 10, "Citrus"));
-        fruits.add( new Fruit("Apricot", 10, "Stone fruit"));
-        fruits.add(new Fruit("Plum", 10, "Stone fruit"));
-        fruits.add( new Fruit("Coconut", 10, "Tropical"));
-
-        Map<String, Fruit> fruitStatistic = new HashMap<>();
-        Iterator<Fruit> iterator = fruits.iterator();
-
-        while (iterator.hasNext()){
-            Fruit next = iterator.next();
-            if (next.getType().equals("Citrus")) {
-            }
+        List<Fruit> fruits = List.of(
+                new Fruit("Lemon", 10, FruitType.CITRUS),
+                new Fruit("Lemon", 25, FruitType.CITRUS),
+                new Fruit("Apricot", 10, FruitType.STONE_FRUIT),
+                new Fruit("Apricot", 45, FruitType.STONE_FRUIT),
+                new Fruit("Pineapple", 10, FruitType.TROPICAL)
+        );
+        FruitService fruitService = new FruitService();
+        Map<FruitType, List<Fruit>> fruitTypeListMap = fruitService.gropeByFruitTypeSorted(fruits);
+        for (Map.Entry<FruitType, List<Fruit>> entry : fruitTypeListMap.entrySet()) {
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
         }
-        System.out.println(fruitStatistic);
+        Map<FruitType, FruitStatistic> statistic = fruitService.calculateStatistic(fruitTypeListMap);
+        for (Map.Entry<FruitType, FruitStatistic> entry : statistic.entrySet()) {
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
+        }
     }
 }
