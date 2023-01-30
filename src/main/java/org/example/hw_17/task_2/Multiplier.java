@@ -4,8 +4,8 @@ import java.util.function.BinaryOperator;
 
 public class Multiplier {
     public static void main(String[] args) {
-        BinaryOperator<Integer> binaryOperator = (firstNumber, secondNumber) -> firstNumber * secondNumber;
-        Integer apply = binaryOperator.apply(2, 8);
+        BinaryOperator<Integer> binaryOperator = (firstNumber, secondNumber) -> firstNumber * secondNumber; // binaryOperator -> expression
+        Integer apply = binaryOperator.apply(2, 8); // apply -> result, apply - это глагол, названия переменных - существительное
         System.out.println(apply);
     }
 }
