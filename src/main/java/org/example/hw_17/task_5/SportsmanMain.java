@@ -19,7 +19,10 @@ public class SportsmanMain {
         Set<Sportsman> winners = new TreeSet<>(comparator);
 
         Iterator<Sportsman> iterator = sportsmen.iterator();
-        while (iterator.hasNext()) {
+        /* если один раз вызвала метод iterator.hasNext(), то и только один раз можно вызвать метод iterator.next();
+        если у тебя будет только 1 спортсмен, то получишь исключение
+        */
+        while (iterator.hasNext()) { 
             Sportsman first = iterator.next();
             first.getMedals().add(0, Medal.GOLD);
             winners.add(first);
@@ -32,5 +35,7 @@ public class SportsmanMain {
             break;
         }
         System.out.println(winners);
+        
+        // я бы предложил сделать цикл, в котором 1 итерация = 1 метру. И запустил всех спортсменов, кто раньше прибежал, того и медали
     }
 }
