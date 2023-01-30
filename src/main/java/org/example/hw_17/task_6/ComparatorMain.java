@@ -12,5 +12,14 @@ public class ComparatorMain {
         List<String> lettersReverse = comparator.turn(letters);
 
         System.out.println(lettersReverse);
+        
+        /*
+        Comparator<String> comparator = (o1, o2) -> o1.compareTo(o2);
+        Comparator<String> reversed = comparator.reversed();
+
+        либо сокращенный вариант
+        Comparator<String> reversed = Comparator.naturalOrder();
+        reversed = reversed.reversed();
+        */   
     }
 }
