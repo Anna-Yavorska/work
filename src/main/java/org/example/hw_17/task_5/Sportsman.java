@@ -5,7 +5,7 @@ import java.util.List;
 public class Sportsman {
     private String name;
     private Integer speed;
-    List<Medal> medals;
+    List<Medal> medals; // private
 
     public Sportsman(String name, Integer speed, List<Medal> medals) {
         this.name = name;
