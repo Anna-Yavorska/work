@@ -6,7 +6,7 @@ public class ConvertingNumberToStringMain {
         ConvertingService convertingService = new ConvertingService();
         Converting converting = convertingService::convertToString;
 
-        String convertingResult = converting.converting(1100);
+        String convertingResult = converting.converting(1100);  // convertingResult -> result будет достаточно в данном случае
         System.out.println(convertingResult);
     }
 }
