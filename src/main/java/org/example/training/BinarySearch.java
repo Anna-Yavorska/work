@@ -7,7 +7,7 @@ public class BinarySearch {
         int target = 6;
 
         int firstIndex = findFirstIndex(arrayWithFewNumbers, target);
-        int lastIndex = findLastIndex(arrayWithFewNumbers, target);
+        int lastIndex = findLastIndex(arrayWithFewNumbers, target); // я думаю в этом методе можно применить firstIndex, чтобы сократить отрезок для поиска
 
         if (firstIndex != -1 && lastIndex != -1) {
             System.out.printf("Number %d is on the position from %d to %d", target, firstIndex, lastIndex);
