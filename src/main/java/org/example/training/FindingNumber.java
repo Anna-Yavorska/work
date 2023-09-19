@@ -1,6 +1,6 @@
 package org.example.training;
 
-public class FindingNmber {
+public class FindingNumber {
     public static void main(String[] args) {
         int[] array = new int[]{6, 6, 6, 6, 6, 6, 6, 6, 8, 8, 8, 8, 10, 9, 8, 7, 6, 6, 6, 6, 6, 1, 0, -1, -3};
         int target = 6;
@@ -46,6 +46,7 @@ public class FindingNmber {
         int left = 0;
         int right = (high - 1);
         int result = -1;
+
         while (left <= right) {
             int mid = (left + right) / 2;
             if (array[mid] == target) {
@@ -83,6 +84,7 @@ public class FindingNmber {
         int left = high + 1;
         int right = (array.length - 1);
         int result = -1;
+
         while (left <= right) {
             int mid = (left + right) / 2;
             if (array[mid] == target) {
@@ -101,6 +103,7 @@ public class FindingNmber {
         int left = firstIndexAfterHigh;
         int right = array.length - 1;
         int result = -1;
+
         while (left <= right) {
             int mid = (left + right) / 2;
             if (array[mid] == target) {
