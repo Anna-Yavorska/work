@@ -1,10 +1,11 @@
 package org.example.training;
 
+// форматирование кода забыла сделать
 public class FindingNumber {
     public static void main(String[] args) {
-        int[] array = new int[]{6, 6, 6, 6, 6, 6, 6, 6, 8, 8, 8, 8, 10, 9, 8, 7, 6, 6, 6, 6, 6, 1, 0, -1, -3};
+        int[] array = new int[]{6, 6, 6, 6, 6, 6, 6, 6, 8, 8, 8, 8, 10, 9, 8, 7, 6, 6, 6, 6, 6, 1, 0, -1, -3}; // если я добавлю еще одну 10 в твой массив, то все ломается
         int target = 6;
-        int top = findIndexOfTop(array);
+        int top = findIndexOfTop(array); // findIndexOfTop -> maxNumberIndex
         int firstIndexBeforeTop = findFirstIndexBeforeTop(array, top, target);
         if(firstIndexBeforeTop > -1){
             int lastIndexBeforeTop = findLastIndexBeforeTop(array, top, firstIndexBeforeTop, target);
@@ -43,8 +44,8 @@ public class FindingNumber {
     }
 
     private static int findFirstIndexBeforeTop(int[] array, int high, int target) {
-        int left = 0;
-        int right = (high - 1);
+        int left = 0; // вот это очень странно, из-за того что ты ввела конкретное число, а не первое в массиве, то твой алгоритм не нашел -1 в левой части
+        int right = (high - 1); // зачем здесь скобки? почему high-1, а не число по индексу топ-1?
         int result = -1;
 
         while (left <= right) {
@@ -82,7 +83,7 @@ public class FindingNumber {
 
     private static int findFirstIndexAfterTop(int[] array, int high, int target) {
         int left = high + 1;
-        int right = (array.length - 1);
+        int right = (array.length - 1); // зачем здесь скобки?
         int result = -1;
 
         while (left <= right) {
